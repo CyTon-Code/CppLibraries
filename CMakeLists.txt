@@ -3,4 +3,5 @@ project(CppLibraries)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CppLibraries main.cpp)
+add_executable(CppLibraries main.cpp lib/tmf.h)
+add_executable(README README.md)

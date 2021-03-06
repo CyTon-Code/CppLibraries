@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/run/media/cytoncode/GIT/CppLibraries/lib/tmf.h">
+			<Option target="CppLibraries"/>
+		</Unit>
 		<Unit filename="/run/media/cytoncode/GIT/CppLibraries/main.cpp">
 			<Option target="CppLibraries"/>
 		</Unit>

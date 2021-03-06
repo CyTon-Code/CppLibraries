@@ -1,14 +1,10 @@
 #include <iostream>
-
-#define exit std::cout << "[Program Finished]\n";return(0)
+//#include "hello/hello.h"
+#include "lib/tmf.h"
+using namespace std;
 
 int main(int argc, char *argv[]) {
-    for (int i = 0; i < argc; i++) {
-        std::cout << argv[i] << " ";
-    }
-
-    std::cout << std::endl;
-    std::cout << "Hello, World!" << std::endl;
-
+    std::string a = "hello";
+    cout << a << endl << len(a);
     exit;
 }
