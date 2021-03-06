@@ -10,4 +10,5 @@
 /lib/
 *.o
 /cmake-build-debug/
-
+/lib/
+/.idea/
