@@ -8,7 +8,9 @@ int main(
         // section len args
         int argc,
         // section array args
-        char *argv[]
+        const char **args
 ) {
+
+    for(i:args)cout << i<< ' ';
     exit;
 }
