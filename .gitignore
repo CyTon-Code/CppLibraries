@@ -9,6 +9,7 @@
 
 /lib/
 *.o
+*.pyc
 /cmake-build-debug/
-/lib/
+
 /.idea/
