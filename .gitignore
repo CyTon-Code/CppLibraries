@@ -9,5 +9,5 @@
 
 /lib/
 *.o
-cmake-build-debug
+/cmake-build-debug/
 
