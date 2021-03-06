@@ -1,12 +1,14 @@
+// section inc
 #include <iostream>
 //#include "hello/hello.h"
 #include "lib/tmf.h"
 
-using namespace std;
-
-int main(int argc, char *argv[]) {
-    std::string a = "hello";
-
-    cout << a << endl << len(a);
+// section main
+int main(
+        // section len args
+        int argc,
+        // section array args
+        char *argv[]
+) {
     exit;
 }
