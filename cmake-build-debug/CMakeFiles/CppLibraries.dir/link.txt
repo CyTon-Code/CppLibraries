@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/CppLibraries.dir/main.cpp.o  -o CppLibraries 
