@@ -131,6 +131,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named CMakeLists
+
+# Build rule for target.
+CMakeLists: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeLists
+.PHONY : CMakeLists
+
+# fast build rule for target.
+CMakeLists/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/build
+.PHONY : CMakeLists/fast
+
+#=============================================================================
+# Target rules for targets named LICENSE
+
+# Build rule for target.
+LICENSE: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LICENSE
+.PHONY : LICENSE
+
+# fast build rule for target.
+LICENSE/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LICENSE.dir/build.make CMakeFiles/LICENSE.dir/build
+.PHONY : LICENSE/fast
+
+#=============================================================================
 # Target rules for targets named code
 
 # Build rule for target.
@@ -260,7 +286,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CMakeLists"
 	@echo "... CppLibraries"
+	@echo "... LICENSE"
 	@echo "... README"
 	@echo "... code"
 	@echo "... main"

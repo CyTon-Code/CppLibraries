@@ -73,6 +73,8 @@ CMAKE_BINARY_DIR = /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/CMakeLists.dir/all
+all: CMakeFiles/LICENSE.dir/all
 all: CMakeFiles/code.dir/all
 all: CMakeFiles/CppLibraries.dir/all
 all: CMakeFiles/README.dir/all
@@ -87,6 +89,8 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/CMakeLists.dir/clean
+clean: CMakeFiles/LICENSE.dir/clean
 clean: CMakeFiles/code.dir/clean
 clean: CMakeFiles/CppLibraries.dir/clean
 clean: CMakeFiles/README.dir/clean
@@ -94,6 +98,60 @@ clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/tmf.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/CMakeLists.dir
+
+# All Build rule for target.
+CMakeFiles/CMakeLists.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles --progress-num= "Built target CMakeLists"
+.PHONY : CMakeFiles/CMakeLists.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CMakeLists.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CMakeLists.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/CMakeLists.dir/rule
+
+# Convenience name for target.
+CMakeLists: CMakeFiles/CMakeLists.dir/rule
+
+.PHONY : CMakeLists
+
+# clean rule for target.
+CMakeFiles/CMakeLists.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/clean
+.PHONY : CMakeFiles/CMakeLists.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/LICENSE.dir
+
+# All Build rule for target.
+CMakeFiles/LICENSE.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LICENSE.dir/build.make CMakeFiles/LICENSE.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LICENSE.dir/build.make CMakeFiles/LICENSE.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles --progress-num= "Built target LICENSE"
+.PHONY : CMakeFiles/LICENSE.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/LICENSE.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LICENSE.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/LICENSE.dir/rule
+
+# Convenience name for target.
+LICENSE: CMakeFiles/LICENSE.dir/rule
+
+.PHONY : LICENSE
+
+# clean rule for target.
+CMakeFiles/LICENSE.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LICENSE.dir/build.make CMakeFiles/LICENSE.dir/clean
+.PHONY : CMakeFiles/LICENSE.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/code.dir
