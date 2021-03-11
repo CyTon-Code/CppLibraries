@@ -144,30 +144,17 @@ CMakeLists/fast:
 .PHONY : CMakeLists/fast
 
 #=============================================================================
-# Target rules for targets named LICENSE
+# Target rules for targets named hello_world_1
 
 # Build rule for target.
-LICENSE: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LICENSE
-.PHONY : LICENSE
+hello_world_1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_world_1
+.PHONY : hello_world_1
 
 # fast build rule for target.
-LICENSE/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LICENSE.dir/build.make CMakeFiles/LICENSE.dir/build
-.PHONY : LICENSE/fast
-
-#=============================================================================
-# Target rules for targets named code
-
-# Build rule for target.
-code: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 code
-.PHONY : code
-
-# fast build rule for target.
-code/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/build
-.PHONY : code/fast
+hello_world_1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/build
+.PHONY : hello_world_1/fast
 
 #=============================================================================
 # Target rules for targets named CppLibraries
@@ -196,19 +183,6 @@ README/fast:
 .PHONY : README/fast
 
 #=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
 # Target rules for targets named tmf
 
 # Build rule for target.
@@ -221,33 +195,6 @@ tmf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
 .PHONY : tmf/fast
 
-lib/code.o: lib/code.cpp.o
-
-.PHONY : lib/code.o
-
-# target to build an object file
-lib/code.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/lib/code.cpp.o
-.PHONY : lib/code.cpp.o
-
-lib/code.i: lib/code.cpp.i
-
-.PHONY : lib/code.i
-
-# target to preprocess a source file
-lib/code.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/lib/code.cpp.i
-.PHONY : lib/code.cpp.i
-
-lib/code.s: lib/code.cpp.s
-
-.PHONY : lib/code.s
-
-# target to generate assembly for a file
-lib/code.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/lib/code.cpp.s
-.PHONY : lib/code.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -255,7 +202,6 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -265,7 +211,6 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -275,8 +220,34 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+scripts/hello_world_1.o: scripts/hello_world_1.cpp.o
+
+.PHONY : scripts/hello_world_1.o
+
+# target to build an object file
+scripts/hello_world_1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/scripts/hello_world_1.cpp.o
+.PHONY : scripts/hello_world_1.cpp.o
+
+scripts/hello_world_1.i: scripts/hello_world_1.cpp.i
+
+.PHONY : scripts/hello_world_1.i
+
+# target to preprocess a source file
+scripts/hello_world_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/scripts/hello_world_1.cpp.i
+.PHONY : scripts/hello_world_1.cpp.i
+
+scripts/hello_world_1.s: scripts/hello_world_1.cpp.s
+
+.PHONY : scripts/hello_world_1.s
+
+# target to generate assembly for a file
+scripts/hello_world_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/scripts/hello_world_1.cpp.s
+.PHONY : scripts/hello_world_1.cpp.s
 
 # Help Target
 help:
@@ -288,17 +259,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CMakeLists"
 	@echo "... CppLibraries"
-	@echo "... LICENSE"
 	@echo "... README"
-	@echo "... code"
-	@echo "... main"
+	@echo "... hello_world_1"
 	@echo "... tmf"
-	@echo "... lib/code.o"
-	@echo "... lib/code.i"
-	@echo "... lib/code.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... scripts/hello_world_1.o"
+	@echo "... scripts/hello_world_1.i"
+	@echo "... scripts/hello_world_1.s"
 .PHONY : help
 
 
