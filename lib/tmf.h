@@ -101,7 +101,7 @@ void print(const std::string &king_str, const std::string &value, ...) {
 bool search_char_in_word(const std::string &separator, char itr) {
     bool itr_is = false;
 
-    foreach (i, separator) {
+    for i in (separator) {
         if (i == itr) itr_is = true;
     }
     return itr_is;
@@ -126,7 +126,7 @@ bool is_this_word_name(String word, bool human) {
 
     bool name = false;
     if (human) {
-        foreach (itr, word) {
+        for itr in(word) {
             bool itr_is = false;// if it in separator: itr_is = true
             if (search_char_in_word(separator, itr)) {// это символ?
                 // Это символ.
@@ -172,7 +172,7 @@ std::string input(const std::string &value) {
 */
 int len(const std::string &value) {
     int n = 0;
-    foreach (i, value) {
+    for i in(value) {
         n++;
     }
 //    for (n = 0; value[n] != '\0'; n++);

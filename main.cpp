@@ -2,19 +2,21 @@
 #include "lib/tmf.h"
 #include "lib/for.h"
 
-// section main
-int main() {
-    cout << len("21") << endl;
-    int a = 20, b = 10;
-    str x = "1";
-    str y = "12";
-    cout << a << " " << b << endl;
-    cout << x << " " << y << endl;
-//    swap_xor(a, b);
-//    swap_operator(x, y);
-    swap_copy(x, y);
-    cout << a << " " << b << endl;
-    cout << x << " " << y << endl;
+#define __NULL_VOID ((void *)0)
+#define __NULL_INT 0
 
-    exit;
-}
+//void *NULL = 0;
+// section main
+begin
+//    cout << (__NULL_VOID and __NULL_INT) << (__NULL_VOID && __NULL_INT) << (__NULL_VOID == __NULL_INT);
+//    cout << 1;
+//    FILE *fp;
+//    fp = fopen("data.cpp.txt", "rt");
+//    if (fp == __NULL_VOID or fp == __NULL_INT) {
+//        puts("opening file not done!");
+//    }
+//    if ((fp = fopen("c:\\my_prog.txt", "rt")) == NULL)
+//    {
+//        puts("Открыть файл не удалось\n");
+//        exit(1);
+end

@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named data.cpp
+
+# Build rule for target.
+data.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data.cpp
+.PHONY : data.cpp
+
+# fast build rule for target.
+data.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.cpp.dir/build.make CMakeFiles/data.cpp.dir/build
+.PHONY : data.cpp/fast
+
+#=============================================================================
 # Target rules for targets named for
 
 # Build rule for target.
@@ -142,6 +155,19 @@ for: cmake_check_build_system
 for/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
 .PHONY : for/fast
+
+#=============================================================================
+# Target rules for targets named README
+
+# Build rule for target.
+README: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 README
+.PHONY : README
+
+# fast build rule for target.
+README/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/README.dir/build.make CMakeFiles/README.dir/build
+.PHONY : README/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -231,6 +257,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CMakeLists"
+	@echo "... README"
+	@echo "... data.cpp"
 	@echo "... def"
 	@echo "... for"
 	@echo "... main"

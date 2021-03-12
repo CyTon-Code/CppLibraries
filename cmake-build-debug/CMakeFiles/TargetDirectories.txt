@@ -1,5 +1,7 @@
 /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/edit_cache.dir
+/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/data.cpp.dir
 /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/for.dir
+/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/README.dir
 /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/main.dir
 /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/def.dir
 /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles/CMakeLists.dir
