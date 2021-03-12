@@ -169,6 +169,19 @@ tmf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
 .PHONY : tmf/fast
 
+#=============================================================================
+# Target rules for targets named for
+
+# Build rule for target.
+for: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 for
+.PHONY : for
+
+# fast build rule for target.
+for/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
+.PHONY : for/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -205,6 +218,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... def"
+	@echo "... for"
 	@echo "... main"
 	@echo "... tmf"
 	@echo "... main.o"

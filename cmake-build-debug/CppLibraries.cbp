@@ -17,6 +17,16 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="main">
 				<Option output="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug"/>
@@ -105,16 +115,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug"/>
 				<Option type="4"/>
@@ -169,9 +169,56 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="for">
+				<Option output="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/for" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 for"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="for/fast">
+				<Option output="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/for" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 for/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/run/media/cytoncode/GIT/CppLibraries/lib/def.h">
 			<Option target="def"/>
+		</Unit>
+		<Unit filename="/run/media/cytoncode/GIT/CppLibraries/lib/for.h">
+			<Option target="for"/>
 		</Unit>
 		<Unit filename="/run/media/cytoncode/GIT/CppLibraries/lib/tmf.h">
 			<Option target="tmf"/>

@@ -7,7 +7,7 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
-/lib/
+/lib/code
 *.o
 *.pyc
 /cmake-build-debug/
