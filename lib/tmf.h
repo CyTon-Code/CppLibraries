@@ -1,10 +1,11 @@
 // Created by CyTon-Code on 06.03.2021.
+#ifndef CPPLIBRARIES_TMF_H // using?
+#define CPPLIBRARIES_TMF_H //using!
+
 #include <iostream>
 #include <cmath>
 #include "def.h"
 
-#ifndef CPPLIBRARIES_TMF_H
-#define CPPLIBRARIES_TMF_H
 #endif //CPPLIBRARIES_TMF_H
 
 
@@ -77,20 +78,20 @@ std::string combine_characters(char b, char i) {
 
 void print(const std::string &king_str, const std::string &value, ...) {
     char b = 0u;
-    for (auto i in king_str) {
+    foreach(i, king_str) {
         std::string word;
-        if (b == 0u) {
-            word = i;
-        } else {
-            word = combine_characters(b, i);//конкатенация символов.
-        }
-        if (word == "%s") {//str
-
-        } else if (word == "%d") {//int
-
-        } else if (word == "%f") {//float
-
-        }
+//        if (b == 0u) {
+//            word = {i, 0};
+//        } else {
+//            word = combine_characters(b, i);//конкатенация символов.
+//        }
+//        if (word == "%s") {//str
+//
+//        } else if (word == "%d") {//int
+//
+//        } else if (word == "%f") {//float
+//
+//        }
         b = i;
     }
     // функция принимает n параметров типа строка и выводит на екран.
@@ -100,7 +101,7 @@ void print(const std::string &king_str, const std::string &value, ...) {
 bool search_char_in_word(const std::string &separator, char itr) {
     bool itr_is = false;
 
-    for (auto i in separator) {
+    foreach (i, separator) {
         if (i == itr) itr_is = true;
     }
     return itr_is;
@@ -125,7 +126,7 @@ bool is_this_word_name(String word, bool human) {
 
     bool name = false;
     if (human) {
-        for (auto itr in word) {
+        foreach (itr, word) {
             bool itr_is = false;// if it in separator: itr_is = true
             if (search_char_in_word(separator, itr)) {// это символ?
                 // Это символ.
@@ -171,8 +172,10 @@ std::string input(const std::string &value) {
 */
 int len(const std::string &value) {
     int n = 0;
-    // foreach i in value){ n++; }
-    for (n = 0; value[n] != '\0'; n++);
+    foreach (i, value) {
+        n++;
+    }
+//    for (n = 0; value[n] != '\0'; n++);
     return n;
 }
 
