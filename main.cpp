@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "lib/tmf.h"
 
 // section main
@@ -11,23 +10,3 @@ int main() {
 
     return 0;
 }
-
-
-
-/*
-int main() {
-    double x, a, c, b, y;
-
-    c = input("c = ");
-    a = input("a = ");
-    x = input("x = ");
-
-    b = pow(c, 3);
-    a = (a * b) + c;
-    x = pow(x * a, 2);
-    y = sin(a / x) + log10(0.08) * exp(x);
-
-    cout << "y= " << y << endl;
-    exit;
-}
- */
