@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named CMakeCache
+
+# Build rule for target.
+CMakeCache: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeCache
+.PHONY : CMakeCache
+
+# fast build rule for target.
+CMakeCache/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCache.dir/build.make CMakeFiles/CMakeCache.dir/build
+.PHONY : CMakeCache/fast
+
+#=============================================================================
 # Target rules for targets named CMakeLists
 
 # Build rule for target.
@@ -257,6 +270,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CMakeCache"
 	@echo "... CMakeLists"
 	@echo "... CppLibraries"
 	@echo "... README"

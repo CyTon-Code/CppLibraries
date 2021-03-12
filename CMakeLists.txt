@@ -16,3 +16,4 @@ add_executable(tmf lib/tmf.h)
 
 #add_executable(CMakeLists CMakeLists.txt)
 add_executable(CMakeLists CMakeLists.txt)
+add_executable(CMakeCache cmake-build-debug/CMakeCache.txt)
