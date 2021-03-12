@@ -11,7 +11,17 @@
 int len(const std::string &value);
 
 template<typename auto_type>
-void swap(auto_type &a, auto_type &b);
+void swap_xor(auto_type &a, auto_type &b);
+
+template<typename auto_type>
+void swap_operator(auto_type &a, auto_type &b);
+
+
+template<typename auto_type>
+void swap_copy(auto_type &a, auto_type &b);
+
+template<typename auto_type>
+void swap_duo_copy(auto_type &a, auto_type &b);
 
 std::string input(const std::string &value);
 
@@ -27,7 +37,7 @@ bool search_char_in_word(const std::string &separator, char itr);
 
 void print(const std::string &king_str, const std::string &value, ...);
 
-std::string concatinechin_char(char b, char i);
+std::string combine_characters(char b, char i);
 
 //=========================================================================================
 
@@ -40,14 +50,28 @@ std::string concatinechin_char(char b, char i);
  * чтобы изменить переменные вам просто нужно бросить источник в парметры.
  * */
 template<typename auto_type>
-void swap(auto_type &a, auto_type &b) {
+void swap_xor(auto_type &a, auto_type &b) {
     a = a ^ b;
     b = a ^ b;
     a = a ^ b;
 }
 
-std::string concatinechin_char(char b, char i) {
-    char word[3] = {b, i, 0};
+/**
+ * функция меняет местами переменные.
+ * <br>
+ * функция не возвращает эти переменные.
+ * <br>
+ * чтобы изменить переменные вам просто нужно бросить источник в парметры.
+ * */
+template<typename auto_type>
+void swap_operator(auto_type &a, auto_type &b) {
+    a = a + b;
+    b = a - b;
+    a = a - b;
+}
+
+std::string combine_characters(char b, char i) {
+    std::string word = {b, i, 0};
     return word;
 }
 
@@ -58,7 +82,7 @@ void print(const std::string &king_str, const std::string &value, ...) {
         if (b == 0u) {
             word = i;
         } else {
-            word = concatinechin_char(b, i);//concatine_char
+            word = combine_characters(b, i);//конкатенация символов.
         }
         if (word == "%s") {//str
 
@@ -153,8 +177,25 @@ int len(const std::string &value) {
 }
 
 
+/**
+ * функция меняет местами переменные.
+ * <br>
+ * функция не возвращает эти переменные.
+ * <br>
+ * чтобы изменить переменные вам просто нужно бросить источник в парметры.
+ * */
+template<typename auto_type>
+void swap_copy(auto_type &a, auto_type &b) {
+    auto_type tmp = a;
+    a = b;
+    b = tmp;
+}
 
 
-
-
-
+template<typename auto_type>
+void swap_duo_copy(auto_type &a, auto_type &b) {
+    auto_type c = a;
+    auto_type d = b;
+    a = d;
+    b = c;
+}

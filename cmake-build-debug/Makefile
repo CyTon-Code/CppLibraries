@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,19 +131,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello_world_1
-
-# Build rule for target.
-hello_world_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_world_1
-.PHONY : hello_world_1
-
-# fast build rule for target.
-hello_world_1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/build
-.PHONY : hello_world_1/fast
-
-#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -155,6 +142,32 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named def
+
+# Build rule for target.
+def: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 def
+.PHONY : def
+
+# fast build rule for target.
+def/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/def.dir/build.make CMakeFiles/def.dir/build
+.PHONY : def/fast
+
+#=============================================================================
+# Target rules for targets named tmf
+
+# Build rule for target.
+tmf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tmf
+.PHONY : tmf
+
+# fast build rule for target.
+tmf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
+.PHONY : tmf/fast
 
 main.o: main.cpp.o
 
@@ -183,33 +196,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-scripts/hello_world_1.o: scripts/hello_world_1.cpp.o
-
-.PHONY : scripts/hello_world_1.o
-
-# target to build an object file
-scripts/hello_world_1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/scripts/hello_world_1.cpp.o
-.PHONY : scripts/hello_world_1.cpp.o
-
-scripts/hello_world_1.i: scripts/hello_world_1.cpp.i
-
-.PHONY : scripts/hello_world_1.i
-
-# target to preprocess a source file
-scripts/hello_world_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/scripts/hello_world_1.cpp.i
-.PHONY : scripts/hello_world_1.cpp.i
-
-scripts/hello_world_1.s: scripts/hello_world_1.cpp.s
-
-.PHONY : scripts/hello_world_1.s
-
-# target to generate assembly for a file
-scripts/hello_world_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world_1.dir/build.make CMakeFiles/hello_world_1.dir/scripts/hello_world_1.cpp.s
-.PHONY : scripts/hello_world_1.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -218,14 +204,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hello_world_1"
+	@echo "... def"
 	@echo "... main"
+	@echo "... tmf"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... scripts/hello_world_1.o"
-	@echo "... scripts/hello_world_1.i"
-	@echo "... scripts/hello_world_1.s"
 .PHONY : help
 
 

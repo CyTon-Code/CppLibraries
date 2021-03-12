@@ -4,6 +4,8 @@
 #define foreach for (auto
 // TODO узнать как с помощью define сменить for на синтаксический пайтон.
 #define in :
+#define _ auto_type
+#define str std::string
 #define exit \
 std::cout << "[Program Finished]" << std::endl;\
 return 0
