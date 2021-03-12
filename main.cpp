@@ -2,9 +2,6 @@
 
 #include "lib/tmf.h"
 
-using std::cout, std::endl;
-//using namespace std;
-
 // section main
 int main() {
     int x1 = 10, x2 = 20;

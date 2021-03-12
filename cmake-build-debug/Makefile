@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -97,6 +86,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,32 +131,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CMakeCache
-
-# Build rule for target.
-CMakeCache: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeCache
-.PHONY : CMakeCache
-
-# fast build rule for target.
-CMakeCache/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCache.dir/build.make CMakeFiles/CMakeCache.dir/build
-.PHONY : CMakeCache/fast
-
-#=============================================================================
-# Target rules for targets named CMakeLists
-
-# Build rule for target.
-CMakeLists: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeLists
-.PHONY : CMakeLists
-
-# fast build rule for target.
-CMakeLists/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/build
-.PHONY : CMakeLists/fast
-
-#=============================================================================
 # Target rules for targets named hello_world_1
 
 # Build rule for target.
@@ -170,43 +144,17 @@ hello_world_1/fast:
 .PHONY : hello_world_1/fast
 
 #=============================================================================
-# Target rules for targets named CppLibraries
+# Target rules for targets named main
 
 # Build rule for target.
-CppLibraries: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CppLibraries
-.PHONY : CppLibraries
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-CppLibraries/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/build
-.PHONY : CppLibraries/fast
-
-#=============================================================================
-# Target rules for targets named README
-
-# Build rule for target.
-README: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 README
-.PHONY : README
-
-# fast build rule for target.
-README/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/README.dir/build.make CMakeFiles/README.dir/build
-.PHONY : README/fast
-
-#=============================================================================
-# Target rules for targets named tmf
-
-# Build rule for target.
-tmf: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tmf
-.PHONY : tmf
-
-# fast build rule for target.
-tmf/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
-.PHONY : tmf/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 main.o: main.cpp.o
 
@@ -214,7 +162,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -223,7 +171,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -232,7 +180,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppLibraries.dir/build.make CMakeFiles/CppLibraries.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 scripts/hello_world_1.o: scripts/hello_world_1.cpp.o
@@ -270,12 +218,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CMakeCache"
-	@echo "... CMakeLists"
-	@echo "... CppLibraries"
-	@echo "... README"
 	@echo "... hello_world_1"
-	@echo "... tmf"
+	@echo "... main"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

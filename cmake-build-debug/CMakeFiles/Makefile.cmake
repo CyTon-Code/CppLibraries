@@ -48,10 +48,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/CMakeCache.dir/DependInfo.cmake"
-  "CMakeFiles/CMakeLists.dir/DependInfo.cmake"
   "CMakeFiles/hello_world_1.dir/DependInfo.cmake"
-  "CMakeFiles/CppLibraries.dir/DependInfo.cmake"
-  "CMakeFiles/README.dir/DependInfo.cmake"
-  "CMakeFiles/tmf.dir/DependInfo.cmake"
+  "CMakeFiles/main.dir/DependInfo.cmake"
   )
