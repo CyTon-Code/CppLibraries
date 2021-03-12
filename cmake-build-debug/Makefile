@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named for
+
+# Build rule for target.
+for: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 for
+.PHONY : for
+
+# fast build rule for target.
+for/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
+.PHONY : for/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -157,6 +170,19 @@ def/fast:
 .PHONY : def/fast
 
 #=============================================================================
+# Target rules for targets named CMakeLists
+
+# Build rule for target.
+CMakeLists: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeLists
+.PHONY : CMakeLists
+
+# fast build rule for target.
+CMakeLists/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/build
+.PHONY : CMakeLists/fast
+
+#=============================================================================
 # Target rules for targets named tmf
 
 # Build rule for target.
@@ -168,19 +194,6 @@ tmf: cmake_check_build_system
 tmf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
 .PHONY : tmf/fast
-
-#=============================================================================
-# Target rules for targets named for
-
-# Build rule for target.
-for: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 for
-.PHONY : for
-
-# fast build rule for target.
-for/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
-.PHONY : for/fast
 
 main.o: main.cpp.o
 
@@ -217,6 +230,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CMakeLists"
 	@echo "... def"
 	@echo "... for"
 	@echo "... main"

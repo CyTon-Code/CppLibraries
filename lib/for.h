@@ -22,9 +22,9 @@ void tmp(auto args);
 #define $
 
 void tmp(auto args) {
-    for i in (args) {
-        cout << i;
-    }
+for i in (args) {
+    cout << i;
+}
 }
 
 #endif //for_python_v1
@@ -38,9 +38,9 @@ void tmp(auto args) {
 #define in
 
 void tmp(auto args) {
-    for(i, args) {
-        cout << i;
-    }
+for(i, args) {
+    cout << i;
+}
 }
 
 #endif //for_python_arg
@@ -54,27 +54,27 @@ void tmp(auto args) {
 #define in :
 
 void tmp(auto args) {
-    for i in args $
-        cout << i;
-    }
+for i in args $
+    cout << i;
+}
 }
 
 #endif //for_python
 
 
-#ifdef for_python
-#define for_python
+#ifdef for_python_tmp
+#define for_python_tmp
 
 #define for for (auto
-#define $ ){
-#define in :
+#define $
+#define in(list) :list)
 
 void tmp(auto args) {
-    for i in args $
+    for i in (args) {
         cout << i;
     }
 }
 
-#endif //for_python
+#endif //for_python_tmp
 
 #endif //CPPLIBRARIES_FOR_H

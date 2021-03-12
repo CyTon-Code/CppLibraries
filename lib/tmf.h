@@ -78,7 +78,7 @@ std::string combine_characters(char b, char i) {
 
 void print(const std::string &king_str, const std::string &value, ...) {
     char b = 0u;
-    foreach(i, king_str) {
+    for i in (king_str) {
         std::string word;
 //        if (b == 0u) {
 //            word = {i, 0};

@@ -73,10 +73,11 @@ CMAKE_BINARY_DIR = /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/for.dir/all
 all: CMakeFiles/main.dir/all
 all: CMakeFiles/def.dir/all
+all: CMakeFiles/CMakeLists.dir/all
 all: CMakeFiles/tmf.dir/all
-all: CMakeFiles/for.dir/all
 
 .PHONY : all
 
@@ -86,12 +87,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/for.dir/clean
 clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/def.dir/clean
+clean: CMakeFiles/CMakeLists.dir/clean
 clean: CMakeFiles/tmf.dir/clean
-clean: CMakeFiles/for.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/for.dir
+
+# All Build rule for target.
+CMakeFiles/for.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles --progress-num= "Built target for"
+.PHONY : CMakeFiles/for.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/for.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/for.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/for.dir/rule
+
+# Convenience name for target.
+for: CMakeFiles/for.dir/rule
+
+.PHONY : for
+
+# clean rule for target.
+CMakeFiles/for.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/clean
+.PHONY : CMakeFiles/for.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
@@ -148,6 +177,33 @@ CMakeFiles/def.dir/clean:
 .PHONY : CMakeFiles/def.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/CMakeLists.dir
+
+# All Build rule for target.
+CMakeFiles/CMakeLists.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles --progress-num= "Built target CMakeLists"
+.PHONY : CMakeFiles/CMakeLists.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CMakeLists.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CMakeLists.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/CMakeLists.dir/rule
+
+# Convenience name for target.
+CMakeLists: CMakeFiles/CMakeLists.dir/rule
+
+.PHONY : CMakeLists
+
+# clean rule for target.
+CMakeFiles/CMakeLists.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeLists.dir/build.make CMakeFiles/CMakeLists.dir/clean
+.PHONY : CMakeFiles/CMakeLists.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/tmf.dir
 
 # All Build rule for target.
@@ -173,33 +229,6 @@ tmf: CMakeFiles/tmf.dir/rule
 CMakeFiles/tmf.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/clean
 .PHONY : CMakeFiles/tmf.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/for.dir
-
-# All Build rule for target.
-CMakeFiles/for.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles --progress-num= "Built target for"
-.PHONY : CMakeFiles/for.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/for.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/for.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/for.dir/rule
-
-# Convenience name for target.
-for: CMakeFiles/for.dir/rule
-
-.PHONY : for
-
-# clean rule for target.
-CMakeFiles/for.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/clean
-.PHONY : CMakeFiles/for.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

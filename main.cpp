@@ -1,5 +1,6 @@
 #include <iostream>
 #include "lib/tmf.h"
+#include "lib/for.h"
 
 // section main
 int main() {
@@ -14,5 +15,6 @@ int main() {
     swap_copy(x, y);
     cout << a << " " << b << endl;
     cout << x << " " << y << endl;
-    return 0;
+
+    exit;
 }

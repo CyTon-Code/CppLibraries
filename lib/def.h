@@ -7,13 +7,9 @@
 using std::endl;
 using std::cout;
 using std::cin;
+#include "for.h"
 
-
-
-
-#define exit \
-std::cout << "[Program Finished]" << std::endl;\
-return 0
+#define exit std::cout<<"[Program Finished]\n";return 0
 // exit; return 0;
 
 #endif //CPPLIBRARIES_DEF_H
