@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /run/media/cytoncode/GIT/CppLibraries/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -97,6 +86,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,69 +131,82 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named data.cpp
+# Target rules for targets named lib
 
 # Build rule for target.
-data.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data.cpp
-.PHONY : data.cpp
+lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib
+.PHONY : lib
 
 # fast build rule for target.
-data.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.cpp.dir/build.make CMakeFiles/data.cpp.dir/build
-.PHONY : data.cpp/fast
+lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/build
+.PHONY : lib/fast
 
 #=============================================================================
-# Target rules for targets named for
+# Target rules for targets named printf
 
 # Build rule for target.
-for: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 for
-.PHONY : for
+printf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 printf
+.PHONY : printf
 
 # fast build rule for target.
-for/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
-.PHONY : for/fast
+printf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/build
+.PHONY : printf/fast
 
 #=============================================================================
-# Target rules for targets named README
+# Target rules for targets named magic
 
 # Build rule for target.
-README: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 README
-.PHONY : README
+magic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic
+.PHONY : magic
 
 # fast build rule for target.
-README/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/README.dir/build.make CMakeFiles/README.dir/build
-.PHONY : README/fast
+magic/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/magic.dir/build.make CMakeFiles/magic.dir/build
+.PHONY : magic/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named gnu-versions
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+gnu-versions: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gnu-versions
+.PHONY : gnu-versions
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+gnu-versions/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gnu-versions.dir/build.make CMakeFiles/gnu-versions.dir/build
+.PHONY : gnu-versions/fast
 
 #=============================================================================
-# Target rules for targets named def
+# Target rules for targets named acl
 
 # Build rule for target.
-def: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 def
-.PHONY : def
+acl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acl
+.PHONY : acl
 
 # fast build rule for target.
-def/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/def.dir/build.make CMakeFiles/def.dir/build
-.PHONY : def/fast
+acl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acl.dir/build.make CMakeFiles/acl.dir/build
+.PHONY : acl/fast
+
+#=============================================================================
+# Target rules for targets named tmf
+
+# Build rule for target.
+tmf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tmf
+.PHONY : tmf
+
+# fast build rule for target.
+tmf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
+.PHONY : tmf/fast
 
 #=============================================================================
 # Target rules for targets named CMakeLists
@@ -209,17 +222,121 @@ CMakeLists/fast:
 .PHONY : CMakeLists/fast
 
 #=============================================================================
-# Target rules for targets named tmf
+# Target rules for targets named def
 
 # Build rule for target.
-tmf: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tmf
-.PHONY : tmf
+def: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 def
+.PHONY : def
 
 # fast build rule for target.
-tmf/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmf.dir/build.make CMakeFiles/tmf.dir/build
-.PHONY : tmf/fast
+def/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/def.dir/build.make CMakeFiles/def.dir/build
+.PHONY : def/fast
+
+#=============================================================================
+# Target rules for targets named README
+
+# Build rule for target.
+README: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 README
+.PHONY : README
+
+# fast build rule for target.
+README/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/README.dir/build.make CMakeFiles/README.dir/build
+.PHONY : README/fast
+
+#=============================================================================
+# Target rules for targets named gnumake
+
+# Build rule for target.
+gnumake: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gnumake
+.PHONY : gnumake
+
+# fast build rule for target.
+gnumake/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gnumake.dir/build.make CMakeFiles/gnumake.dir/build
+.PHONY : gnumake/fast
+
+#=============================================================================
+# Target rules for targets named data.cpp
+
+# Build rule for target.
+data.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data.cpp
+.PHONY : data.cpp
+
+# fast build rule for target.
+data.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.cpp.dir/build.make CMakeFiles/data.cpp.dir/build
+.PHONY : data.cpp/fast
+
+#=============================================================================
+# Target rules for targets named statx
+
+# Build rule for target.
+statx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 statx
+.PHONY : statx
+
+# fast build rule for target.
+statx/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/statx.dir/build.make CMakeFiles/statx.dir/build
+.PHONY : statx/fast
+
+#=============================================================================
+# Target rules for targets named limits
+
+# Build rule for target.
+limits: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 limits
+.PHONY : limits
+
+# fast build rule for target.
+limits/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/limits.dir/build.make CMakeFiles/limits.dir/build
+.PHONY : limits/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named for
+
+# Build rule for target.
+for: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 for
+.PHONY : for
+
+# fast build rule for target.
+for/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/for.dir/build.make CMakeFiles/for.dir/build
+.PHONY : for/fast
+
+#=============================================================================
+# Target rules for targets named syslimits
+
+# Build rule for target.
+syslimits: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 syslimits
+.PHONY : syslimits
+
+# fast build rule for target.
+syslimits/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/syslimits.dir/build.make CMakeFiles/syslimits.dir/build
+.PHONY : syslimits/fast
 
 main.o: main.cpp.o
 
@@ -258,10 +375,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CMakeLists"
 	@echo "... README"
+	@echo "... acl"
 	@echo "... data.cpp"
 	@echo "... def"
 	@echo "... for"
+	@echo "... gnu-versions"
+	@echo "... gnumake"
+	@echo "... lib"
+	@echo "... limits"
+	@echo "... magic"
 	@echo "... main"
+	@echo "... printf"
+	@echo "... statx"
+	@echo "... syslimits"
 	@echo "... tmf"
 	@echo "... main.o"
 	@echo "... main.i"
