@@ -14,7 +14,7 @@ void print(auto args);
 //#define foreach(i, list)for(auto i: list)
 //#define foreac (i , list) foreach( i,  list)
 
-#ifndef for_python_v1
+#ifdef for_python_v1
 #define for_python_v1
 
 #define for for (auto
@@ -65,19 +65,40 @@ void print(auto args) {
 #endif //for_python
 
 
-#ifdef for_python_tmp
+#ifndef for_python_tmp
 //#define for_python_tmp
+#define _ auto
+//#define AUTO ($
+#define FOR for (_
+#define $ ){
+#define END_IF ) END_PRM
+#define IN :
+#define _IN ,
+#define AND ,
+#define IF if(
+#define $_IF )$
+#define ITS search(
+#define NEW _
+#define END }
+#define SEP <<
+#define NAME(name) name(
 
-#define for for (auto
-#define $
-#define in(list) :list)
+#define PRINT cout SEP
 
-void print(auto args) {
-    for i in (args) {
-        cout << i << " ";
-    }
+//#define _ifg
+//#define _inn(i, list) if(search(i, list)){
+
+NEW NAME(&print)
+        NEW args AND NEW s $
+    FOR arg IN args $
+        PRINT arg SEP " ";
+//        IF ITS arg _IN args $_IF
+//            // if arg in args:
+//        END
+    END
+
     cout << endl;
-}
+END
 
 #endif //for_python_tmp
 

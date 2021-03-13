@@ -8,6 +8,7 @@
 //void *NULL = 0;
 // section main
 begin
+    print("sdfsf");
 //    cout << (__NULL_VOID and __NULL_INT) << (__NULL_VOID && __NULL_INT) << (__NULL_VOID == __NULL_INT);
 //    cout << 1;
 //    FILE *fp;

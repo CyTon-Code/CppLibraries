@@ -78,7 +78,8 @@ std::string combine_characters(char b, char i) {
 
 void print(const std::string &king_str, const std::string &value, ...) {
     char b = 0u;
-    for i in (king_str) {
+    for
+    i in(king_str) {
         std::string word;
 //        if (b == 0u) {
 //            word = {i, 0};
@@ -101,7 +102,7 @@ void print(const std::string &king_str, const std::string &value, ...) {
 bool search_char_in_word(const std::string &separator, char itr) {
     bool itr_is = false;
 
-    for i in (separator) {
+    _for i _in separator _$
         if (i == itr) itr_is = true;
     }
     return itr_is;
@@ -126,7 +127,8 @@ bool is_this_word_name(String word, bool human) {
 
     bool name = false;
     if (human) {
-        for itr in(word) {
+        for
+        itr in(word) {
             bool itr_is = false;// if it in separator: itr_is = true
             if (search_char_in_word(separator, itr)) {// это символ?
                 // Это символ.
@@ -172,7 +174,8 @@ std::string input(const std::string &value) {
 */
 int len(const std::string &value) {
     int n = 0;
-    for i in(value) {
+    for
+    i in(value) {
         n++;
     }
 //    for (n = 0; value[n] != '\0'; n++);
