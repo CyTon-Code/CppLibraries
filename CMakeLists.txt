@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(CppLearning)
+project(CppLibraries)
 
 set(CMAKE_CXX_STANDARD 20)
 #add_executable(hello_world_1 scripts/hello_world_1.cpp)
@@ -48,3 +48,4 @@ add_executable(gnumake /usr/include/gnumake.h)
 add_executable(magic /usr/include/magic.h)
 add_executable(printf /usr/include/printf.h)
 add_executable(lib lib/)
+add_executable(советы lib/советы)
